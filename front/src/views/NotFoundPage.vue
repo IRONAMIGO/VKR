@@ -6,7 +6,7 @@ import { useAuth } from '@/composables/useAuth.ts'
 const router = useRouter()
 const { isAuthenticated } = useAuth()
 
-const homeRoute = computed(() => (isAuthenticated.value ? '/students' : '/login'))
+const homeRoute = computed(() => (isAuthenticated.value ? '/api/students' : '/api/login'))
 
 function goHome() {
   router.push(homeRoute.value)
