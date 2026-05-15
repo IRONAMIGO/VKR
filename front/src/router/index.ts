@@ -5,38 +5,38 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/login',
+            path: '/api/login',
             name: 'Login',
             component: () => import('@/views/LoginPage.vue'),
         },
         {
-            path: '/streams',
+            path: '/api/streams',
             component: () => import('@/views/StreamsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/groups',
+            path: '/api/groups',
             component: () => import('@/views/GroupsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/students',
+            path: '/api/students',
             component: () => import('@/views/StudentsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/students/:id',
+            path: '/api/students/:id',
             name: 'StudentDetail',
             component: () => import('@/views/StudentDetailPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/reports',
+            path: '/api/reports',
             component: () => import('@/views/ReportsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/reports/:id',
+            path: '/api/reports/:id',
             component: () => import('@/views/ReportResultPage.vue'),
             meta: { requiresAuth: true },
         },
@@ -57,10 +57,10 @@ router.beforeEach(async (to, _from) => {
         await auth.init()
     }
 
-    if (to.path === '/login') {
+    if (to.path === '/api/login') {
         // Если уже залогинен, перенаправляем на защищённую страницу
         if (auth.isAuthenticated.value) {
-            return '/students'
+            return '/api/students'
         }
         return true
     }
@@ -69,7 +69,7 @@ router.beforeEach(async (to, _from) => {
     if (to.matched.some((record) => record.meta.requiresAuth)) {
         if (!auth.isAuthenticated.value) {
             return {
-                path: '/login',
+                path: '/api/login',
                 query: { redirect: to.fullPath },
             }
         }
