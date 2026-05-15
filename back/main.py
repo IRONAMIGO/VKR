@@ -47,12 +47,12 @@ app.add_middleware(
     expose_headers=["X-Total-Count"],
 )
 
-app.include_router(streams_router)
-app.include_router(groups_router)
-app.include_router(students_router)
-app.include_router(references_router)
-app.include_router(reports_router)
-app.include_router(token_router)
-app.include_router(users_router)
+app.include_router(streams_router, prefix='/api')
+app.include_router(groups_router, prefix='/api')
+app.include_router(students_router, prefix='/api')
+app.include_router(references_router, prefix='/api')
+app.include_router(reports_router, prefix='/api')
+app.include_router(token_router, prefix='/api')
+app.include_router(users_router, prefix='/api')
 
 app.mount("/data", StaticFiles(directory="data"), name="data")
