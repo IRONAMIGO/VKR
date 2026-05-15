@@ -68,7 +68,7 @@ async def create_reference(
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
 
     # Относительный путь от BASE_DIR (для хранения в БД)
-    file_db_path = "/" + str(file_path.relative_to(BASE_DIR)).replace("\\","/")
+    file_db_path = "/api/" + str(file_path.relative_to(BASE_DIR)).replace("\\","/")
 
     # Загружаем изображение
     img = read_image_bytes(await photo.read())
