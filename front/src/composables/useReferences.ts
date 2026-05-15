@@ -1,10 +1,10 @@
 import { ref, type Ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
-    readReferencesStudentsStudentIdPhotosGet,
-    readReferenceStudentsStudentIdPhotosPhotoIdGet,
-    createReferenceStudentsStudentIdPhotosPost,
-    deleteReferenceStudentsStudentIdPhotosPhotoIdDelete,
+    readReferencesApiStudentsStudentIdPhotosGet,
+    readReferenceApiStudentsStudentIdPhotosPhotoIdGet,
+    createReferenceApiStudentsStudentIdPhotosPost,
+    deleteReferenceApiStudentsStudentIdPhotosPhotoIdDelete,
 } from '@/api/client/sdk.gen'
 import type { ReferenceFacePublic } from '@/api/client/types.gen'
 
@@ -23,7 +23,7 @@ export function useReferences(studentId: Ref<number>) {
         lastOffset = offset
         lastLimit = limit
         try {
-            const response = await readReferencesStudentsStudentIdPhotosGet({
+            const response = await readReferencesApiStudentsStudentIdPhotosGet({
                 path: { student_id: studentId.value },
                 query: { offset, limit },
             })
@@ -46,7 +46,7 @@ export function useReferences(studentId: Ref<number>) {
     async function fetchPhoto(id: number): Promise<ReferenceFacePublic | undefined> {
         loading.value = true
         try {
-            const response = await readReferenceStudentsStudentIdPhotosPhotoIdGet({
+            const response = await readReferenceApiStudentsStudentIdPhotosPhotoIdGet({
                 path: { student_id: studentId.value, photo_id: id },
             })
             return response.data
@@ -62,7 +62,7 @@ export function useReferences(studentId: Ref<number>) {
     async function uploadPhoto(file: File) {
         loading.value = true
         try {
-            const response = await createReferenceStudentsStudentIdPhotosPost({
+            const response = await createReferenceApiStudentsStudentIdPhotosPost({
                 path: { student_id: studentId.value },
                 body: { photo: file },
             })
@@ -83,7 +83,7 @@ export function useReferences(studentId: Ref<number>) {
     async function deletePhoto(photoId: number) {
         loading.value = true
         try {
-            await deleteReferenceStudentsStudentIdPhotosPhotoIdDelete({
+            await deleteReferenceApiStudentsStudentIdPhotosPhotoIdDelete({
                 path: { student_id: studentId.value, photo_id: photoId },
             })
             ElMessage.success('Фото удалено')

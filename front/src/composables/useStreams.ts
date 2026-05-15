@@ -1,11 +1,11 @@
 import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
-    readStreamsStreamsGet,
-    readStreamStreamsStreamIdGet,
-    createStreamStreamsPost,
-    updateStreamStreamsStreamIdPut,
-    deleteStreamStreamsStreamIdDelete,
+    readStreamsApiStreamsGet,
+    readStreamApiStreamsStreamIdGet,
+    createStreamApiStreamsPost,
+    updateStreamApiStreamsStreamIdPut,
+    deleteStreamApiStreamsStreamIdDelete,
 } from '@/api/client/sdk.gen'
 import type { StreamPublic, StreamCreate, StreamUpdate } from '@/api/client/types.gen'
 
@@ -28,7 +28,7 @@ export function useStreams() {
             if (offset != null) query.offset = offset
             if (limit != null) query.limit = limit
 
-            const response = await readStreamsStreamsGet({ query })
+            const response = await readStreamsApiStreamsGet({ query })
             if (response.data) {
                 items.value = response.data
             }
@@ -52,7 +52,7 @@ export function useStreams() {
     async function fetchStream(id: number): Promise<StreamPublic | undefined> {
         loading.value = true
         try {
-            const response = await readStreamStreamsStreamIdGet({ path: { stream_id: id } })
+            const response = await readStreamApiStreamsStreamIdGet({ path: { stream_id: id } })
             return response.data
         } catch (e: any) {
             const msg = e?.message || 'Ошибка получения потока'
@@ -66,7 +66,7 @@ export function useStreams() {
     async function createStream(data: StreamCreate): Promise<StreamPublic | undefined> {
         loading.value = true
         try {
-            const response = await createStreamStreamsPost({ body: data })
+            const response = await createStreamApiStreamsPost({ body: data })
             if (response.data) {
                 ElMessage.success('Поток создан')
                 await refresh()
@@ -84,7 +84,7 @@ export function useStreams() {
     async function updateStream(id: number, data: StreamUpdate): Promise<StreamPublic | undefined> {
         loading.value = true
         try {
-            const response = await updateStreamStreamsStreamIdPut({
+            const response = await updateStreamApiStreamsStreamIdPut({
                 path: { stream_id: id },
                 body: data,
             })
@@ -105,7 +105,7 @@ export function useStreams() {
     async function deleteStream(id: number): Promise<void> {
         loading.value = true
         try {
-            await deleteStreamStreamsStreamIdDelete({ path: { stream_id: id } })
+            await deleteStreamApiStreamsStreamIdDelete({ path: { stream_id: id } })
             ElMessage.success('Поток удалён')
             await refresh()
         } catch (e: any) {

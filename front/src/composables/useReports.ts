@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
-import { readResultsReportsGet } from '@/api/client/sdk.gen'
+import { readResultsApiReportsGet } from '@/api/client/sdk.gen'
 import type { RecognitionDataPublicWithRecognitionResultAndStudent } from '@/api/client/types.gen'
 
 export interface ReportsFilters {
@@ -41,7 +41,7 @@ export function useReports() {
             if (offset != null) query.offset = offset
             if (limit != null) query.limit = limit
 
-            const res = await readResultsReportsGet({ query })
+            const res = await readResultsApiReportsGet({ query })
             items.value = res.data ?? []
             const tc = res.response?.headers?.get('X-Total-Count')
             total.value = tc ? parseInt(tc, 10) : 0

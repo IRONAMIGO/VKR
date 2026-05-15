@@ -1,11 +1,11 @@
 import { ref, unref, type MaybeRef } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
-    readGroupsGroupsGet,
-    readGroupGroupsGroupIdGet,
-    createGroupGroupsPost,
-    updateGroupGroupsGroupIdPut,
-    deleteGroupGroupsGroupIdDelete,
+    readGroupsApiGroupsGet,
+    readGroupApiGroupsGroupIdGet,
+    createGroupApiGroupsPost,
+    updateGroupApiGroupsGroupIdPut,
+    deleteGroupApiGroupsGroupIdDelete,
 } from '@/api/client/sdk.gen'
 import type { GroupPublicWithStream, GroupCreate, GroupUpdate } from '@/api/client/types.gen'
 
@@ -31,7 +31,7 @@ export function useGroups(streamId?: MaybeRef<number | undefined | null>) {
             if (offset != null) query.offset = offset
             if (limit != null) query.limit = limit
 
-            const response = await readGroupsGroupsGet({ query })
+            const response = await readGroupsApiGroupsGet({ query })
             if (response.data) {
                 items.value = response.data
             }
@@ -55,7 +55,7 @@ export function useGroups(streamId?: MaybeRef<number | undefined | null>) {
     async function fetchGroup(id: number): Promise<GroupPublicWithStream | undefined> {
         loading.value = true
         try {
-            const response = await readGroupGroupsGroupIdGet({ path: { group_id: id } })
+            const response = await readGroupApiGroupsGroupIdGet({ path: { group_id: id } })
             return response.data
         } catch (e: any) {
             const msg = e?.message || 'Ошибка получения группы'
@@ -69,7 +69,7 @@ export function useGroups(streamId?: MaybeRef<number | undefined | null>) {
     async function createGroup(data: GroupCreate): Promise<GroupPublicWithStream | undefined> {
         loading.value = true
         try {
-            const response = await createGroupGroupsPost({ body: data })
+            const response = await createGroupApiGroupsPost({ body: data })
             if (response.data) {
                 ElMessage.success('Группа создана')
                 await refresh()   // перезагружаем текущую страницу
@@ -87,7 +87,7 @@ export function useGroups(streamId?: MaybeRef<number | undefined | null>) {
     async function updateGroup(id: number, data: GroupUpdate): Promise<GroupPublicWithStream | undefined> {
         loading.value = true
         try {
-            const response = await updateGroupGroupsGroupIdPut({
+            const response = await updateGroupApiGroupsGroupIdPut({
                 path: { group_id: id },
                 body: data,
             })
@@ -108,7 +108,7 @@ export function useGroups(streamId?: MaybeRef<number | undefined | null>) {
     async function deleteGroup(id: number) {
         loading.value = true
         try {
-            await deleteGroupGroupsGroupIdDelete({ path: { group_id: id } })
+            await deleteGroupApiGroupsGroupIdDelete({ path: { group_id: id } })
             ElMessage.success('Группа удалена')
             await refresh()
         } catch (e: any) {

@@ -1,11 +1,11 @@
 import { ref, unref, type MaybeRef } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
-    readStudentsStudentsGet,
-    readStudentStudentsStudentIdGet,
-    createStudentStudentsPost,
-    updateStudentStudentsStudentIdPut,
-    deleteStudentStudentsStudentIdDelete,
+    readStudentsApiStudentsGet,
+    readStudentApiStudentsStudentIdGet,
+    createStudentApiStudentsPost,
+    updateStudentApiStudentsStudentIdPut,
+    deleteStudentApiStudentsStudentIdDelete,
 } from '@/api/client/sdk.gen'
 import type {
     StudentPublicWithGroup,
@@ -36,7 +36,7 @@ export function useStudents(groupId?: MaybeRef<number | undefined | null>) {
             if (offset != null) query.offset = offset
             if (limit != null) query.limit = limit
 
-            const response = await readStudentsStudentsGet({ query })
+            const response = await readStudentsApiStudentsGet({ query })
             if (response.data) {
                 items.value = response.data
             }
@@ -60,7 +60,7 @@ export function useStudents(groupId?: MaybeRef<number | undefined | null>) {
     async function fetchStudent(id: number): Promise<StudentPrivate | undefined> {
         loading.value = true
         try {
-            const response = await readStudentStudentsStudentIdGet({
+            const response = await readStudentApiStudentsStudentIdGet({
                 path: { student_id: id },
             })
             return response.data
@@ -76,7 +76,7 @@ export function useStudents(groupId?: MaybeRef<number | undefined | null>) {
     async function createStudent(data: StudentCreate): Promise<StudentPublic | undefined> {
         loading.value = true
         try {
-            const response = await createStudentStudentsPost({ body: data })
+            const response = await createStudentApiStudentsPost({ body: data })
             if (response.data) {
                 ElMessage.success('Студент создан')
                 await refresh()
@@ -94,7 +94,7 @@ export function useStudents(groupId?: MaybeRef<number | undefined | null>) {
     async function updateStudent(id: number, data: StudentUpdate): Promise<StudentPublic | undefined> {
         loading.value = true
         try {
-            const response = await updateStudentStudentsStudentIdPut({
+            const response = await updateStudentApiStudentsStudentIdPut({
                 path: { student_id: id },
                 body: data,
             })
@@ -115,7 +115,7 @@ export function useStudents(groupId?: MaybeRef<number | undefined | null>) {
     async function deleteStudent(id: number) {
         loading.value = true
         try {
-            await deleteStudentStudentsStudentIdDelete({ path: { student_id: id } })
+            await deleteStudentApiStudentsStudentIdDelete({ path: { student_id: id } })
             ElMessage.success('Студент удалён')
             await refresh()
         } catch (e: any) {

@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
-import { createResultReportsPost } from '@/api/client/sdk.gen'
+import { createResultApiReportsPost } from '@/api/client/sdk.gen'
 import type { RecognitionDataPublic } from '@/api/client/types.gen'
 
 export function useRecognition() {
@@ -16,7 +16,7 @@ export function useRecognition() {
         loading.value = true
         error.value = null
         try {
-            const response = await createResultReportsPost({
+            const response = await createResultApiReportsPost({
                 body: {
                     data: {
                         lecture_date: params.lecture_date,

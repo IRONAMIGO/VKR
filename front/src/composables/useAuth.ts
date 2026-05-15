@@ -1,5 +1,5 @@
 import { ref, computed, readonly } from 'vue'
-import { loginForAccessTokenTokenPost, readUsersMeUsersMeGet } from '@/api/client/sdk.gen.ts'
+import { loginForAccessTokenApiTokenPost, readUsersMeApiUsersMeGet } from '@/api/client/sdk.gen.ts'
 import type { UserPublic } from '@/api/client/types.gen.ts'
 
 const token = ref<string | null>(localStorage.getItem('access_token'))
@@ -12,7 +12,7 @@ export function useAuth() {
     const isAuthenticated = computed(() => !!token.value)
 
     async function login(username: string, password: string): Promise<boolean> {
-        const resp = await loginForAccessTokenTokenPost({
+        const resp = await loginForAccessTokenApiTokenPost({
             body: { username, password },
         })
         if (resp.data) {
@@ -21,7 +21,7 @@ export function useAuth() {
 
             // Подтягиваем информацию о пользователе
             try {
-                const userResp = await readUsersMeUsersMeGet()
+                const userResp = await readUsersMeApiUsersMeGet()
                 if (userResp.data) {
                     user.value = userResp.data
                     localStorage.setItem('user', JSON.stringify(userResp.data))
@@ -37,7 +37,7 @@ export function useAuth() {
     async function fetchUser() {
         if (!token.value) return
         try {
-            const userResp = await readUsersMeUsersMeGet()
+            const userResp = await readUsersMeApiUsersMeGet()
             if (userResp.data) {
                 user.value = userResp.data
                 localStorage.setItem('user', JSON.stringify(userResp.data))
