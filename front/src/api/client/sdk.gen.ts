@@ -2,7 +2,7 @@
 
 import { type Client, formDataBodySerializer, type Options as Options2, type TDataShape, urlSearchParamsBodySerializer } from './client';
 import { client } from './client.gen';
-import type { CreateGroupGroupsPostData, CreateGroupGroupsPostErrors, CreateGroupGroupsPostResponses, CreateReferenceStudentsStudentIdPhotosPostData, CreateReferenceStudentsStudentIdPhotosPostErrors, CreateReferenceStudentsStudentIdPhotosPostResponses, CreateResultReportsPostData, CreateResultReportsPostErrors, CreateResultReportsPostResponses, CreateStreamStreamsPostData, CreateStreamStreamsPostErrors, CreateStreamStreamsPostResponses, CreateStudentStudentsPostData, CreateStudentStudentsPostErrors, CreateStudentStudentsPostResponses, DeleteGroupGroupsGroupIdDeleteData, DeleteGroupGroupsGroupIdDeleteErrors, DeleteGroupGroupsGroupIdDeleteResponses, DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteData, DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteErrors, DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteResponses, DeleteStreamStreamsStreamIdDeleteData, DeleteStreamStreamsStreamIdDeleteErrors, DeleteStreamStreamsStreamIdDeleteResponses, DeleteStudentStudentsStudentIdDeleteData, DeleteStudentStudentsStudentIdDeleteErrors, DeleteStudentStudentsStudentIdDeleteResponses, LoginForAccessTokenTokenPostData, LoginForAccessTokenTokenPostErrors, LoginForAccessTokenTokenPostResponses, ReadAllUsersUsersGetData, ReadAllUsersUsersGetResponses, ReadGroupGroupsGroupIdGetData, ReadGroupGroupsGroupIdGetErrors, ReadGroupGroupsGroupIdGetResponses, ReadGroupsGroupsGetData, ReadGroupsGroupsGetErrors, ReadGroupsGroupsGetResponses, ReadReferencesStudentsStudentIdPhotosGetData, ReadReferencesStudentsStudentIdPhotosGetErrors, ReadReferencesStudentsStudentIdPhotosGetResponses, ReadReferenceStudentsStudentIdPhotosPhotoIdGetData, ReadReferenceStudentsStudentIdPhotosPhotoIdGetErrors, ReadReferenceStudentsStudentIdPhotosPhotoIdGetResponses, ReadReportReportsDataIdGetData, ReadReportReportsDataIdGetErrors, ReadReportReportsDataIdGetResponses, ReadResultsReportsGetData, ReadResultsReportsGetErrors, ReadResultsReportsGetResponses, ReadStreamsStreamsGetData, ReadStreamsStreamsGetErrors, ReadStreamsStreamsGetResponses, ReadStreamStreamsStreamIdGetData, ReadStreamStreamsStreamIdGetErrors, ReadStreamStreamsStreamIdGetResponses, ReadStudentsStudentsGetData, ReadStudentsStudentsGetErrors, ReadStudentsStudentsGetResponses, ReadStudentStudentsStudentIdGetData, ReadStudentStudentsStudentIdGetErrors, ReadStudentStudentsStudentIdGetResponses, ReadUsersMeUsersMeGetData, ReadUsersMeUsersMeGetResponses, UpdateGroupGroupsGroupIdPutData, UpdateGroupGroupsGroupIdPutErrors, UpdateGroupGroupsGroupIdPutResponses, UpdateResultReportsResultsResultIdPutData, UpdateResultReportsResultsResultIdPutErrors, UpdateResultReportsResultsResultIdPutResponses, UpdateStreamStreamsStreamIdPutData, UpdateStreamStreamsStreamIdPutErrors, UpdateStreamStreamsStreamIdPutResponses, UpdateStudentStudentsStudentIdPutData, UpdateStudentStudentsStudentIdPutErrors, UpdateStudentStudentsStudentIdPutResponses } from './types.gen';
+import type { CreateGroupApiGroupsPostData, CreateGroupApiGroupsPostErrors, CreateGroupApiGroupsPostResponses, CreateReferenceApiStudentsStudentIdPhotosPostData, CreateReferenceApiStudentsStudentIdPhotosPostErrors, CreateReferenceApiStudentsStudentIdPhotosPostResponses, CreateResultApiReportsPostData, CreateResultApiReportsPostErrors, CreateResultApiReportsPostResponses, CreateStreamApiStreamsPostData, CreateStreamApiStreamsPostErrors, CreateStreamApiStreamsPostResponses, CreateStudentApiStudentsPostData, CreateStudentApiStudentsPostErrors, CreateStudentApiStudentsPostResponses, DeleteGroupApiGroupsGroupIdDeleteData, DeleteGroupApiGroupsGroupIdDeleteErrors, DeleteGroupApiGroupsGroupIdDeleteResponses, DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteData, DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteErrors, DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteResponses, DeleteStreamApiStreamsStreamIdDeleteData, DeleteStreamApiStreamsStreamIdDeleteErrors, DeleteStreamApiStreamsStreamIdDeleteResponses, DeleteStudentApiStudentsStudentIdDeleteData, DeleteStudentApiStudentsStudentIdDeleteErrors, DeleteStudentApiStudentsStudentIdDeleteResponses, LoginForAccessTokenApiTokenPostData, LoginForAccessTokenApiTokenPostErrors, LoginForAccessTokenApiTokenPostResponses, ReadAllUsersApiUsersGetData, ReadAllUsersApiUsersGetResponses, ReadGroupApiGroupsGroupIdGetData, ReadGroupApiGroupsGroupIdGetErrors, ReadGroupApiGroupsGroupIdGetResponses, ReadGroupsApiGroupsGetData, ReadGroupsApiGroupsGetErrors, ReadGroupsApiGroupsGetResponses, ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetData, ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetErrors, ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetResponses, ReadReferencesApiStudentsStudentIdPhotosGetData, ReadReferencesApiStudentsStudentIdPhotosGetErrors, ReadReferencesApiStudentsStudentIdPhotosGetResponses, ReadReportApiReportsDataIdGetData, ReadReportApiReportsDataIdGetErrors, ReadReportApiReportsDataIdGetResponses, ReadResultsApiReportsGetData, ReadResultsApiReportsGetErrors, ReadResultsApiReportsGetResponses, ReadStreamApiStreamsStreamIdGetData, ReadStreamApiStreamsStreamIdGetErrors, ReadStreamApiStreamsStreamIdGetResponses, ReadStreamsApiStreamsGetData, ReadStreamsApiStreamsGetErrors, ReadStreamsApiStreamsGetResponses, ReadStudentApiStudentsStudentIdGetData, ReadStudentApiStudentsStudentIdGetErrors, ReadStudentApiStudentsStudentIdGetResponses, ReadStudentsApiStudentsGetData, ReadStudentsApiStudentsGetErrors, ReadStudentsApiStudentsGetResponses, ReadUsersMeApiUsersMeGetData, ReadUsersMeApiUsersMeGetResponses, UpdateGroupApiGroupsGroupIdPutData, UpdateGroupApiGroupsGroupIdPutErrors, UpdateGroupApiGroupsGroupIdPutResponses, UpdateResultApiReportsResultsResultIdPutData, UpdateResultApiReportsResultsResultIdPutErrors, UpdateResultApiReportsResultsResultIdPutResponses, UpdateStreamApiStreamsStreamIdPutData, UpdateStreamApiStreamsStreamIdPutErrors, UpdateStreamApiStreamsStreamIdPutResponses, UpdateStudentApiStudentsStudentIdPutData, UpdateStudentApiStudentsStudentIdPutErrors, UpdateStudentApiStudentsStudentIdPutResponses } from './types.gen';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean, TResponse = unknown> = Options2<TData, ThrowOnError, TResponse> & {
     /**
@@ -21,9 +21,9 @@ export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends 
 /**
  * Read Streams
  */
-export const readStreamsStreamsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadStreamsStreamsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadStreamsStreamsGetResponses, ReadStreamsStreamsGetErrors, ThrowOnError>({
+export const readStreamsApiStreamsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadStreamsApiStreamsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadStreamsApiStreamsGetResponses, ReadStreamsApiStreamsGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/streams/',
+    url: '/api/streams/',
     ...options
 });
 
@@ -34,10 +34,10 @@ export const readStreamsStreamsGet = <ThrowOnError extends boolean = false>(opti
  * - **name** - имя группы;
  * - **stream_id** - id потока;
  */
-export const createStreamStreamsPost = <ThrowOnError extends boolean = false>(options: Options<CreateStreamStreamsPostData, ThrowOnError>) => (options.client ?? client).post<CreateStreamStreamsPostResponses, CreateStreamStreamsPostErrors, ThrowOnError>({
+export const createStreamApiStreamsPost = <ThrowOnError extends boolean = false>(options: Options<CreateStreamApiStreamsPostData, ThrowOnError>) => (options.client ?? client).post<CreateStreamApiStreamsPostResponses, CreateStreamApiStreamsPostErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/streams/',
+    url: '/api/streams/',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -48,28 +48,28 @@ export const createStreamStreamsPost = <ThrowOnError extends boolean = false>(op
 /**
  * Delete Stream
  */
-export const deleteStreamStreamsStreamIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteStreamStreamsStreamIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteStreamStreamsStreamIdDeleteResponses, DeleteStreamStreamsStreamIdDeleteErrors, ThrowOnError>({
+export const deleteStreamApiStreamsStreamIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteStreamApiStreamsStreamIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteStreamApiStreamsStreamIdDeleteResponses, DeleteStreamApiStreamsStreamIdDeleteErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/streams/{stream_id}',
+    url: '/api/streams/{stream_id}',
     ...options
 });
 
 /**
  * Read Stream
  */
-export const readStreamStreamsStreamIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadStreamStreamsStreamIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadStreamStreamsStreamIdGetResponses, ReadStreamStreamsStreamIdGetErrors, ThrowOnError>({
+export const readStreamApiStreamsStreamIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadStreamApiStreamsStreamIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadStreamApiStreamsStreamIdGetResponses, ReadStreamApiStreamsStreamIdGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/streams/{stream_id}',
+    url: '/api/streams/{stream_id}',
     ...options
 });
 
 /**
  * Update Stream
  */
-export const updateStreamStreamsStreamIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateStreamStreamsStreamIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateStreamStreamsStreamIdPutResponses, UpdateStreamStreamsStreamIdPutErrors, ThrowOnError>({
+export const updateStreamApiStreamsStreamIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateStreamApiStreamsStreamIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateStreamApiStreamsStreamIdPutResponses, UpdateStreamApiStreamsStreamIdPutErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/streams/{stream_id}',
+    url: '/api/streams/{stream_id}',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -80,9 +80,9 @@ export const updateStreamStreamsStreamIdPut = <ThrowOnError extends boolean = fa
 /**
  * Read Groups
  */
-export const readGroupsGroupsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadGroupsGroupsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadGroupsGroupsGetResponses, ReadGroupsGroupsGetErrors, ThrowOnError>({
+export const readGroupsApiGroupsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadGroupsApiGroupsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadGroupsApiGroupsGetResponses, ReadGroupsApiGroupsGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/groups/',
+    url: '/api/groups/',
     ...options
 });
 
@@ -93,10 +93,10 @@ export const readGroupsGroupsGet = <ThrowOnError extends boolean = false>(option
  * - **name** - имя группы;
  * - **stream_id** - id потока;
  */
-export const createGroupGroupsPost = <ThrowOnError extends boolean = false>(options: Options<CreateGroupGroupsPostData, ThrowOnError>) => (options.client ?? client).post<CreateGroupGroupsPostResponses, CreateGroupGroupsPostErrors, ThrowOnError>({
+export const createGroupApiGroupsPost = <ThrowOnError extends boolean = false>(options: Options<CreateGroupApiGroupsPostData, ThrowOnError>) => (options.client ?? client).post<CreateGroupApiGroupsPostResponses, CreateGroupApiGroupsPostErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/groups/',
+    url: '/api/groups/',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -107,28 +107,28 @@ export const createGroupGroupsPost = <ThrowOnError extends boolean = false>(opti
 /**
  * Delete Group
  */
-export const deleteGroupGroupsGroupIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteGroupGroupsGroupIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteGroupGroupsGroupIdDeleteResponses, DeleteGroupGroupsGroupIdDeleteErrors, ThrowOnError>({
+export const deleteGroupApiGroupsGroupIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteGroupApiGroupsGroupIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteGroupApiGroupsGroupIdDeleteResponses, DeleteGroupApiGroupsGroupIdDeleteErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/groups/{group_id}',
+    url: '/api/groups/{group_id}',
     ...options
 });
 
 /**
  * Read Group
  */
-export const readGroupGroupsGroupIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadGroupGroupsGroupIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadGroupGroupsGroupIdGetResponses, ReadGroupGroupsGroupIdGetErrors, ThrowOnError>({
+export const readGroupApiGroupsGroupIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadGroupApiGroupsGroupIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadGroupApiGroupsGroupIdGetResponses, ReadGroupApiGroupsGroupIdGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/groups/{group_id}',
+    url: '/api/groups/{group_id}',
     ...options
 });
 
 /**
  * Update Group
  */
-export const updateGroupGroupsGroupIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateGroupGroupsGroupIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateGroupGroupsGroupIdPutResponses, UpdateGroupGroupsGroupIdPutErrors, ThrowOnError>({
+export const updateGroupApiGroupsGroupIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateGroupApiGroupsGroupIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateGroupApiGroupsGroupIdPutResponses, UpdateGroupApiGroupsGroupIdPutErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/groups/{group_id}',
+    url: '/api/groups/{group_id}',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -139,9 +139,9 @@ export const updateGroupGroupsGroupIdPut = <ThrowOnError extends boolean = false
 /**
  * Read Students
  */
-export const readStudentsStudentsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadStudentsStudentsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadStudentsStudentsGetResponses, ReadStudentsStudentsGetErrors, ThrowOnError>({
+export const readStudentsApiStudentsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadStudentsApiStudentsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadStudentsApiStudentsGetResponses, ReadStudentsApiStudentsGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/',
+    url: '/api/students/',
     ...options
 });
 
@@ -154,10 +154,10 @@ export const readStudentsStudentsGet = <ThrowOnError extends boolean = false>(op
  * - **phone_number** - номер телефона (необязательный);
  * - **email** - электронная почта (необязательный);
  */
-export const createStudentStudentsPost = <ThrowOnError extends boolean = false>(options: Options<CreateStudentStudentsPostData, ThrowOnError>) => (options.client ?? client).post<CreateStudentStudentsPostResponses, CreateStudentStudentsPostErrors, ThrowOnError>({
+export const createStudentApiStudentsPost = <ThrowOnError extends boolean = false>(options: Options<CreateStudentApiStudentsPostData, ThrowOnError>) => (options.client ?? client).post<CreateStudentApiStudentsPostResponses, CreateStudentApiStudentsPostErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/',
+    url: '/api/students/',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -168,28 +168,28 @@ export const createStudentStudentsPost = <ThrowOnError extends boolean = false>(
 /**
  * Delete Student
  */
-export const deleteStudentStudentsStudentIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteStudentStudentsStudentIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteStudentStudentsStudentIdDeleteResponses, DeleteStudentStudentsStudentIdDeleteErrors, ThrowOnError>({
+export const deleteStudentApiStudentsStudentIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteStudentApiStudentsStudentIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteStudentApiStudentsStudentIdDeleteResponses, DeleteStudentApiStudentsStudentIdDeleteErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}',
+    url: '/api/students/{student_id}',
     ...options
 });
 
 /**
  * Read Student
  */
-export const readStudentStudentsStudentIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadStudentStudentsStudentIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadStudentStudentsStudentIdGetResponses, ReadStudentStudentsStudentIdGetErrors, ThrowOnError>({
+export const readStudentApiStudentsStudentIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadStudentApiStudentsStudentIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadStudentApiStudentsStudentIdGetResponses, ReadStudentApiStudentsStudentIdGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}',
+    url: '/api/students/{student_id}',
     ...options
 });
 
 /**
  * Update Student
  */
-export const updateStudentStudentsStudentIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateStudentStudentsStudentIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateStudentStudentsStudentIdPutResponses, UpdateStudentStudentsStudentIdPutErrors, ThrowOnError>({
+export const updateStudentApiStudentsStudentIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateStudentApiStudentsStudentIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateStudentApiStudentsStudentIdPutResponses, UpdateStudentApiStudentsStudentIdPutErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}',
+    url: '/api/students/{student_id}',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -200,9 +200,9 @@ export const updateStudentStudentsStudentIdPut = <ThrowOnError extends boolean =
 /**
  * Read References
  */
-export const readReferencesStudentsStudentIdPhotosGet = <ThrowOnError extends boolean = false>(options: Options<ReadReferencesStudentsStudentIdPhotosGetData, ThrowOnError>) => (options.client ?? client).get<ReadReferencesStudentsStudentIdPhotosGetResponses, ReadReferencesStudentsStudentIdPhotosGetErrors, ThrowOnError>({
+export const readReferencesApiStudentsStudentIdPhotosGet = <ThrowOnError extends boolean = false>(options: Options<ReadReferencesApiStudentsStudentIdPhotosGetData, ThrowOnError>) => (options.client ?? client).get<ReadReferencesApiStudentsStudentIdPhotosGetResponses, ReadReferencesApiStudentsStudentIdPhotosGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}/photos/',
+    url: '/api/students/{student_id}/photos/',
     ...options
 });
 
@@ -213,10 +213,10 @@ export const readReferencesStudentsStudentIdPhotosGet = <ThrowOnError extends bo
  * - **student_id** - id группы;
  * - **photo** - файл с фотографией;
  */
-export const createReferenceStudentsStudentIdPhotosPost = <ThrowOnError extends boolean = false>(options: Options<CreateReferenceStudentsStudentIdPhotosPostData, ThrowOnError>) => (options.client ?? client).post<CreateReferenceStudentsStudentIdPhotosPostResponses, CreateReferenceStudentsStudentIdPhotosPostErrors, ThrowOnError>({
+export const createReferenceApiStudentsStudentIdPhotosPost = <ThrowOnError extends boolean = false>(options: Options<CreateReferenceApiStudentsStudentIdPhotosPostData, ThrowOnError>) => (options.client ?? client).post<CreateReferenceApiStudentsStudentIdPhotosPostResponses, CreateReferenceApiStudentsStudentIdPhotosPostErrors, ThrowOnError>({
     ...formDataBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}/photos/',
+    url: '/api/students/{student_id}/photos/',
     ...options,
     headers: {
         'Content-Type': null,
@@ -227,27 +227,27 @@ export const createReferenceStudentsStudentIdPhotosPost = <ThrowOnError extends 
 /**
  * Delete Reference
  */
-export const deleteReferenceStudentsStudentIdPhotosPhotoIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteResponses, DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteErrors, ThrowOnError>({
+export const deleteReferenceApiStudentsStudentIdPhotosPhotoIdDelete = <ThrowOnError extends boolean = false>(options: Options<DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteData, ThrowOnError>) => (options.client ?? client).delete<DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteResponses, DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}/photos/{photo_id}',
+    url: '/api/students/{student_id}/photos/{photo_id}',
     ...options
 });
 
 /**
  * Read Reference
  */
-export const readReferenceStudentsStudentIdPhotosPhotoIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadReferenceStudentsStudentIdPhotosPhotoIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadReferenceStudentsStudentIdPhotosPhotoIdGetResponses, ReadReferenceStudentsStudentIdPhotosPhotoIdGetErrors, ThrowOnError>({
+export const readReferenceApiStudentsStudentIdPhotosPhotoIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetResponses, ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/students/{student_id}/photos/{photo_id}',
+    url: '/api/students/{student_id}/photos/{photo_id}',
     ...options
 });
 
 /**
  * Read Results
  */
-export const readResultsReportsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadResultsReportsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadResultsReportsGetResponses, ReadResultsReportsGetErrors, ThrowOnError>({
+export const readResultsApiReportsGet = <ThrowOnError extends boolean = false>(options?: Options<ReadResultsApiReportsGetData, ThrowOnError>) => (options?.client ?? client).get<ReadResultsApiReportsGetResponses, ReadResultsApiReportsGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/reports/',
+    url: '/api/reports/',
     ...options
 });
 
@@ -259,10 +259,10 @@ export const readResultsReportsGet = <ThrowOnError extends boolean = false>(opti
  * - **lecture_num** - номер в расписании;
  * - **photo** - файл с фотографией;
  */
-export const createResultReportsPost = <ThrowOnError extends boolean = false>(options: Options<CreateResultReportsPostData, ThrowOnError>) => (options.client ?? client).post<CreateResultReportsPostResponses, CreateResultReportsPostErrors, ThrowOnError>({
+export const createResultApiReportsPost = <ThrowOnError extends boolean = false>(options: Options<CreateResultApiReportsPostData, ThrowOnError>) => (options.client ?? client).post<CreateResultApiReportsPostResponses, CreateResultApiReportsPostErrors, ThrowOnError>({
     ...formDataBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/reports/',
+    url: '/api/reports/',
     ...options,
     headers: {
         'Content-Type': null,
@@ -273,19 +273,19 @@ export const createResultReportsPost = <ThrowOnError extends boolean = false>(op
 /**
  * Read Report
  */
-export const readReportReportsDataIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadReportReportsDataIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadReportReportsDataIdGetResponses, ReadReportReportsDataIdGetErrors, ThrowOnError>({
+export const readReportApiReportsDataIdGet = <ThrowOnError extends boolean = false>(options: Options<ReadReportApiReportsDataIdGetData, ThrowOnError>) => (options.client ?? client).get<ReadReportApiReportsDataIdGetResponses, ReadReportApiReportsDataIdGetErrors, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/reports/{data_id}',
+    url: '/api/reports/{data_id}',
     ...options
 });
 
 /**
  * Update Result
  */
-export const updateResultReportsResultsResultIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateResultReportsResultsResultIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateResultReportsResultsResultIdPutResponses, UpdateResultReportsResultsResultIdPutErrors, ThrowOnError>({
+export const updateResultApiReportsResultsResultIdPut = <ThrowOnError extends boolean = false>(options: Options<UpdateResultApiReportsResultsResultIdPutData, ThrowOnError>) => (options.client ?? client).put<UpdateResultApiReportsResultsResultIdPutResponses, UpdateResultApiReportsResultsResultIdPutErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/reports/results/{result_id}',
+    url: '/api/reports/results/{result_id}',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -298,9 +298,9 @@ export const updateResultReportsResultsResultIdPut = <ThrowOnError extends boole
  *
  * При успешной аутентификации возвращает токен, содержащий роль пользователя в качестве scope.
  */
-export const loginForAccessTokenTokenPost = <ThrowOnError extends boolean = false>(options: Options<LoginForAccessTokenTokenPostData, ThrowOnError>) => (options.client ?? client).post<LoginForAccessTokenTokenPostResponses, LoginForAccessTokenTokenPostErrors, ThrowOnError>({
+export const loginForAccessTokenApiTokenPost = <ThrowOnError extends boolean = false>(options: Options<LoginForAccessTokenApiTokenPostData, ThrowOnError>) => (options.client ?? client).post<LoginForAccessTokenApiTokenPostResponses, LoginForAccessTokenApiTokenPostErrors, ThrowOnError>({
     ...urlSearchParamsBodySerializer,
-    url: '/token/',
+    url: '/api/token/',
     ...options,
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -313,9 +313,9 @@ export const loginForAccessTokenTokenPost = <ThrowOnError extends boolean = fals
  *
  * Возвращает информацию о текущем пользователе.
  */
-export const readUsersMeUsersMeGet = <ThrowOnError extends boolean = false>(options?: Options<ReadUsersMeUsersMeGetData, ThrowOnError>) => (options?.client ?? client).get<ReadUsersMeUsersMeGetResponses, unknown, ThrowOnError>({
+export const readUsersMeApiUsersMeGet = <ThrowOnError extends boolean = false>(options?: Options<ReadUsersMeApiUsersMeGetData, ThrowOnError>) => (options?.client ?? client).get<ReadUsersMeApiUsersMeGetResponses, unknown, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/users/me/',
+    url: '/api/users/me/',
     ...options
 });
 
@@ -324,8 +324,8 @@ export const readUsersMeUsersMeGet = <ThrowOnError extends boolean = false>(opti
  *
  * Только для администраторов.
  */
-export const readAllUsersUsersGet = <ThrowOnError extends boolean = false>(options?: Options<ReadAllUsersUsersGetData, ThrowOnError>) => (options?.client ?? client).get<ReadAllUsersUsersGetResponses, unknown, ThrowOnError>({
+export const readAllUsersApiUsersGet = <ThrowOnError extends boolean = false>(options?: Options<ReadAllUsersApiUsersGetData, ThrowOnError>) => (options?.client ?? client).get<ReadAllUsersApiUsersGetResponses, unknown, ThrowOnError>({
     security: [{ scheme: 'bearer', type: 'http' }],
-    url: '/users/',
+    url: '/api/users/',
     ...options
 });

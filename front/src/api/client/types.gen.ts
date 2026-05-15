@@ -5,9 +5,9 @@ export type ClientOptions = {
 };
 
 /**
- * Body_create_reference_students__student_id__photos__post
+ * Body_create_reference_api_students__student_id__photos__post
  */
-export type BodyCreateReferenceStudentsStudentIdPhotosPost = {
+export type BodyCreateReferenceApiStudentsStudentIdPhotosPost = {
     /**
      * Photo
      */
@@ -15,9 +15,9 @@ export type BodyCreateReferenceStudentsStudentIdPhotosPost = {
 };
 
 /**
- * Body_create_result_reports__post
+ * Body_create_result_api_reports__post
  */
-export type BodyCreateResultReportsPost = {
+export type BodyCreateResultApiReportsPost = {
     /**
      * Data
      */
@@ -29,9 +29,9 @@ export type BodyCreateResultReportsPost = {
 };
 
 /**
- * Body_login_for_access_token_token__post
+ * Body_login_for_access_token_api_token__post
  */
-export type BodyLoginForAccessTokenTokenPost = {
+export type BodyLoginForAccessTokenApiTokenPost = {
     /**
      * Grant Type
      */
@@ -484,7 +484,7 @@ export type ValidationError = {
     };
 };
 
-export type ReadStreamsStreamsGetData = {
+export type ReadStreamsApiStreamsGetData = {
     body?: never;
     path?: never;
     query?: {
@@ -497,55 +497,55 @@ export type ReadStreamsStreamsGetData = {
          */
         limit?: number | null;
     };
-    url: '/streams/';
+    url: '/api/streams/';
 };
 
-export type ReadStreamsStreamsGetErrors = {
+export type ReadStreamsApiStreamsGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadStreamsStreamsGetError = ReadStreamsStreamsGetErrors[keyof ReadStreamsStreamsGetErrors];
+export type ReadStreamsApiStreamsGetError = ReadStreamsApiStreamsGetErrors[keyof ReadStreamsApiStreamsGetErrors];
 
-export type ReadStreamsStreamsGetResponses = {
+export type ReadStreamsApiStreamsGetResponses = {
     /**
-     * Response Read Streams Streams  Get
+     * Response Read Streams Api Streams  Get
      *
      * Successful Response
      */
     200: Array<StreamPublic>;
 };
 
-export type ReadStreamsStreamsGetResponse = ReadStreamsStreamsGetResponses[keyof ReadStreamsStreamsGetResponses];
+export type ReadStreamsApiStreamsGetResponse = ReadStreamsApiStreamsGetResponses[keyof ReadStreamsApiStreamsGetResponses];
 
-export type CreateStreamStreamsPostData = {
+export type CreateStreamApiStreamsPostData = {
     body: StreamCreate;
     path?: never;
     query?: never;
-    url: '/streams/';
+    url: '/api/streams/';
 };
 
-export type CreateStreamStreamsPostErrors = {
+export type CreateStreamApiStreamsPostErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type CreateStreamStreamsPostError = CreateStreamStreamsPostErrors[keyof CreateStreamStreamsPostErrors];
+export type CreateStreamApiStreamsPostError = CreateStreamApiStreamsPostErrors[keyof CreateStreamApiStreamsPostErrors];
 
-export type CreateStreamStreamsPostResponses = {
+export type CreateStreamApiStreamsPostResponses = {
     /**
      * Successful Response
      */
     201: StreamPublic;
 };
 
-export type CreateStreamStreamsPostResponse = CreateStreamStreamsPostResponses[keyof CreateStreamStreamsPostResponses];
+export type CreateStreamApiStreamsPostResponse = CreateStreamApiStreamsPostResponses[keyof CreateStreamApiStreamsPostResponses];
 
-export type DeleteStreamStreamsStreamIdDeleteData = {
+export type DeleteStreamApiStreamsStreamIdDeleteData = {
     body?: never;
     path: {
         /**
@@ -554,26 +554,26 @@ export type DeleteStreamStreamsStreamIdDeleteData = {
         stream_id: number;
     };
     query?: never;
-    url: '/streams/{stream_id}';
+    url: '/api/streams/{stream_id}';
 };
 
-export type DeleteStreamStreamsStreamIdDeleteErrors = {
+export type DeleteStreamApiStreamsStreamIdDeleteErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type DeleteStreamStreamsStreamIdDeleteError = DeleteStreamStreamsStreamIdDeleteErrors[keyof DeleteStreamStreamsStreamIdDeleteErrors];
+export type DeleteStreamApiStreamsStreamIdDeleteError = DeleteStreamApiStreamsStreamIdDeleteErrors[keyof DeleteStreamApiStreamsStreamIdDeleteErrors];
 
-export type DeleteStreamStreamsStreamIdDeleteResponses = {
+export type DeleteStreamApiStreamsStreamIdDeleteResponses = {
     /**
      * Successful Response
      */
     200: unknown;
 };
 
-export type ReadStreamStreamsStreamIdGetData = {
+export type ReadStreamApiStreamsStreamIdGetData = {
     body?: never;
     path: {
         /**
@@ -582,28 +582,28 @@ export type ReadStreamStreamsStreamIdGetData = {
         stream_id: number;
     };
     query?: never;
-    url: '/streams/{stream_id}';
+    url: '/api/streams/{stream_id}';
 };
 
-export type ReadStreamStreamsStreamIdGetErrors = {
+export type ReadStreamApiStreamsStreamIdGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadStreamStreamsStreamIdGetError = ReadStreamStreamsStreamIdGetErrors[keyof ReadStreamStreamsStreamIdGetErrors];
+export type ReadStreamApiStreamsStreamIdGetError = ReadStreamApiStreamsStreamIdGetErrors[keyof ReadStreamApiStreamsStreamIdGetErrors];
 
-export type ReadStreamStreamsStreamIdGetResponses = {
+export type ReadStreamApiStreamsStreamIdGetResponses = {
     /**
      * Successful Response
      */
     200: StreamPublic;
 };
 
-export type ReadStreamStreamsStreamIdGetResponse = ReadStreamStreamsStreamIdGetResponses[keyof ReadStreamStreamsStreamIdGetResponses];
+export type ReadStreamApiStreamsStreamIdGetResponse = ReadStreamApiStreamsStreamIdGetResponses[keyof ReadStreamApiStreamsStreamIdGetResponses];
 
-export type UpdateStreamStreamsStreamIdPutData = {
+export type UpdateStreamApiStreamsStreamIdPutData = {
     body: StreamUpdate;
     path: {
         /**
@@ -612,28 +612,28 @@ export type UpdateStreamStreamsStreamIdPutData = {
         stream_id: number;
     };
     query?: never;
-    url: '/streams/{stream_id}';
+    url: '/api/streams/{stream_id}';
 };
 
-export type UpdateStreamStreamsStreamIdPutErrors = {
+export type UpdateStreamApiStreamsStreamIdPutErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type UpdateStreamStreamsStreamIdPutError = UpdateStreamStreamsStreamIdPutErrors[keyof UpdateStreamStreamsStreamIdPutErrors];
+export type UpdateStreamApiStreamsStreamIdPutError = UpdateStreamApiStreamsStreamIdPutErrors[keyof UpdateStreamApiStreamsStreamIdPutErrors];
 
-export type UpdateStreamStreamsStreamIdPutResponses = {
+export type UpdateStreamApiStreamsStreamIdPutResponses = {
     /**
      * Successful Response
      */
     200: StreamPublic;
 };
 
-export type UpdateStreamStreamsStreamIdPutResponse = UpdateStreamStreamsStreamIdPutResponses[keyof UpdateStreamStreamsStreamIdPutResponses];
+export type UpdateStreamApiStreamsStreamIdPutResponse = UpdateStreamApiStreamsStreamIdPutResponses[keyof UpdateStreamApiStreamsStreamIdPutResponses];
 
-export type ReadGroupsGroupsGetData = {
+export type ReadGroupsApiGroupsGetData = {
     body?: never;
     path?: never;
     query?: {
@@ -650,55 +650,55 @@ export type ReadGroupsGroupsGetData = {
          */
         limit?: number | null;
     };
-    url: '/groups/';
+    url: '/api/groups/';
 };
 
-export type ReadGroupsGroupsGetErrors = {
+export type ReadGroupsApiGroupsGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadGroupsGroupsGetError = ReadGroupsGroupsGetErrors[keyof ReadGroupsGroupsGetErrors];
+export type ReadGroupsApiGroupsGetError = ReadGroupsApiGroupsGetErrors[keyof ReadGroupsApiGroupsGetErrors];
 
-export type ReadGroupsGroupsGetResponses = {
+export type ReadGroupsApiGroupsGetResponses = {
     /**
-     * Response Read Groups Groups  Get
+     * Response Read Groups Api Groups  Get
      *
      * Successful Response
      */
     200: Array<GroupPublicWithStream>;
 };
 
-export type ReadGroupsGroupsGetResponse = ReadGroupsGroupsGetResponses[keyof ReadGroupsGroupsGetResponses];
+export type ReadGroupsApiGroupsGetResponse = ReadGroupsApiGroupsGetResponses[keyof ReadGroupsApiGroupsGetResponses];
 
-export type CreateGroupGroupsPostData = {
+export type CreateGroupApiGroupsPostData = {
     body: GroupCreate;
     path?: never;
     query?: never;
-    url: '/groups/';
+    url: '/api/groups/';
 };
 
-export type CreateGroupGroupsPostErrors = {
+export type CreateGroupApiGroupsPostErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type CreateGroupGroupsPostError = CreateGroupGroupsPostErrors[keyof CreateGroupGroupsPostErrors];
+export type CreateGroupApiGroupsPostError = CreateGroupApiGroupsPostErrors[keyof CreateGroupApiGroupsPostErrors];
 
-export type CreateGroupGroupsPostResponses = {
+export type CreateGroupApiGroupsPostResponses = {
     /**
      * Successful Response
      */
     201: GroupPublicWithStream;
 };
 
-export type CreateGroupGroupsPostResponse = CreateGroupGroupsPostResponses[keyof CreateGroupGroupsPostResponses];
+export type CreateGroupApiGroupsPostResponse = CreateGroupApiGroupsPostResponses[keyof CreateGroupApiGroupsPostResponses];
 
-export type DeleteGroupGroupsGroupIdDeleteData = {
+export type DeleteGroupApiGroupsGroupIdDeleteData = {
     body?: never;
     path: {
         /**
@@ -707,26 +707,26 @@ export type DeleteGroupGroupsGroupIdDeleteData = {
         group_id: number;
     };
     query?: never;
-    url: '/groups/{group_id}';
+    url: '/api/groups/{group_id}';
 };
 
-export type DeleteGroupGroupsGroupIdDeleteErrors = {
+export type DeleteGroupApiGroupsGroupIdDeleteErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type DeleteGroupGroupsGroupIdDeleteError = DeleteGroupGroupsGroupIdDeleteErrors[keyof DeleteGroupGroupsGroupIdDeleteErrors];
+export type DeleteGroupApiGroupsGroupIdDeleteError = DeleteGroupApiGroupsGroupIdDeleteErrors[keyof DeleteGroupApiGroupsGroupIdDeleteErrors];
 
-export type DeleteGroupGroupsGroupIdDeleteResponses = {
+export type DeleteGroupApiGroupsGroupIdDeleteResponses = {
     /**
      * Successful Response
      */
     200: unknown;
 };
 
-export type ReadGroupGroupsGroupIdGetData = {
+export type ReadGroupApiGroupsGroupIdGetData = {
     body?: never;
     path: {
         /**
@@ -735,28 +735,28 @@ export type ReadGroupGroupsGroupIdGetData = {
         group_id: number;
     };
     query?: never;
-    url: '/groups/{group_id}';
+    url: '/api/groups/{group_id}';
 };
 
-export type ReadGroupGroupsGroupIdGetErrors = {
+export type ReadGroupApiGroupsGroupIdGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadGroupGroupsGroupIdGetError = ReadGroupGroupsGroupIdGetErrors[keyof ReadGroupGroupsGroupIdGetErrors];
+export type ReadGroupApiGroupsGroupIdGetError = ReadGroupApiGroupsGroupIdGetErrors[keyof ReadGroupApiGroupsGroupIdGetErrors];
 
-export type ReadGroupGroupsGroupIdGetResponses = {
+export type ReadGroupApiGroupsGroupIdGetResponses = {
     /**
      * Successful Response
      */
     200: GroupPublicWithStream;
 };
 
-export type ReadGroupGroupsGroupIdGetResponse = ReadGroupGroupsGroupIdGetResponses[keyof ReadGroupGroupsGroupIdGetResponses];
+export type ReadGroupApiGroupsGroupIdGetResponse = ReadGroupApiGroupsGroupIdGetResponses[keyof ReadGroupApiGroupsGroupIdGetResponses];
 
-export type UpdateGroupGroupsGroupIdPutData = {
+export type UpdateGroupApiGroupsGroupIdPutData = {
     body: GroupUpdate;
     path: {
         /**
@@ -765,28 +765,28 @@ export type UpdateGroupGroupsGroupIdPutData = {
         group_id: number;
     };
     query?: never;
-    url: '/groups/{group_id}';
+    url: '/api/groups/{group_id}';
 };
 
-export type UpdateGroupGroupsGroupIdPutErrors = {
+export type UpdateGroupApiGroupsGroupIdPutErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type UpdateGroupGroupsGroupIdPutError = UpdateGroupGroupsGroupIdPutErrors[keyof UpdateGroupGroupsGroupIdPutErrors];
+export type UpdateGroupApiGroupsGroupIdPutError = UpdateGroupApiGroupsGroupIdPutErrors[keyof UpdateGroupApiGroupsGroupIdPutErrors];
 
-export type UpdateGroupGroupsGroupIdPutResponses = {
+export type UpdateGroupApiGroupsGroupIdPutResponses = {
     /**
      * Successful Response
      */
     200: GroupPublicWithStream;
 };
 
-export type UpdateGroupGroupsGroupIdPutResponse = UpdateGroupGroupsGroupIdPutResponses[keyof UpdateGroupGroupsGroupIdPutResponses];
+export type UpdateGroupApiGroupsGroupIdPutResponse = UpdateGroupApiGroupsGroupIdPutResponses[keyof UpdateGroupApiGroupsGroupIdPutResponses];
 
-export type ReadStudentsStudentsGetData = {
+export type ReadStudentsApiStudentsGetData = {
     body?: never;
     path?: never;
     query?: {
@@ -803,55 +803,55 @@ export type ReadStudentsStudentsGetData = {
          */
         limit?: number | null;
     };
-    url: '/students/';
+    url: '/api/students/';
 };
 
-export type ReadStudentsStudentsGetErrors = {
+export type ReadStudentsApiStudentsGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadStudentsStudentsGetError = ReadStudentsStudentsGetErrors[keyof ReadStudentsStudentsGetErrors];
+export type ReadStudentsApiStudentsGetError = ReadStudentsApiStudentsGetErrors[keyof ReadStudentsApiStudentsGetErrors];
 
-export type ReadStudentsStudentsGetResponses = {
+export type ReadStudentsApiStudentsGetResponses = {
     /**
-     * Response Read Students Students  Get
+     * Response Read Students Api Students  Get
      *
      * Successful Response
      */
     200: Array<StudentPublicWithGroup>;
 };
 
-export type ReadStudentsStudentsGetResponse = ReadStudentsStudentsGetResponses[keyof ReadStudentsStudentsGetResponses];
+export type ReadStudentsApiStudentsGetResponse = ReadStudentsApiStudentsGetResponses[keyof ReadStudentsApiStudentsGetResponses];
 
-export type CreateStudentStudentsPostData = {
+export type CreateStudentApiStudentsPostData = {
     body: StudentCreate;
     path?: never;
     query?: never;
-    url: '/students/';
+    url: '/api/students/';
 };
 
-export type CreateStudentStudentsPostErrors = {
+export type CreateStudentApiStudentsPostErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type CreateStudentStudentsPostError = CreateStudentStudentsPostErrors[keyof CreateStudentStudentsPostErrors];
+export type CreateStudentApiStudentsPostError = CreateStudentApiStudentsPostErrors[keyof CreateStudentApiStudentsPostErrors];
 
-export type CreateStudentStudentsPostResponses = {
+export type CreateStudentApiStudentsPostResponses = {
     /**
      * Successful Response
      */
     201: StudentPublic;
 };
 
-export type CreateStudentStudentsPostResponse = CreateStudentStudentsPostResponses[keyof CreateStudentStudentsPostResponses];
+export type CreateStudentApiStudentsPostResponse = CreateStudentApiStudentsPostResponses[keyof CreateStudentApiStudentsPostResponses];
 
-export type DeleteStudentStudentsStudentIdDeleteData = {
+export type DeleteStudentApiStudentsStudentIdDeleteData = {
     body?: never;
     path: {
         /**
@@ -860,26 +860,26 @@ export type DeleteStudentStudentsStudentIdDeleteData = {
         student_id: number;
     };
     query?: never;
-    url: '/students/{student_id}';
+    url: '/api/students/{student_id}';
 };
 
-export type DeleteStudentStudentsStudentIdDeleteErrors = {
+export type DeleteStudentApiStudentsStudentIdDeleteErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type DeleteStudentStudentsStudentIdDeleteError = DeleteStudentStudentsStudentIdDeleteErrors[keyof DeleteStudentStudentsStudentIdDeleteErrors];
+export type DeleteStudentApiStudentsStudentIdDeleteError = DeleteStudentApiStudentsStudentIdDeleteErrors[keyof DeleteStudentApiStudentsStudentIdDeleteErrors];
 
-export type DeleteStudentStudentsStudentIdDeleteResponses = {
+export type DeleteStudentApiStudentsStudentIdDeleteResponses = {
     /**
      * Successful Response
      */
     200: unknown;
 };
 
-export type ReadStudentStudentsStudentIdGetData = {
+export type ReadStudentApiStudentsStudentIdGetData = {
     body?: never;
     path: {
         /**
@@ -888,28 +888,28 @@ export type ReadStudentStudentsStudentIdGetData = {
         student_id: number;
     };
     query?: never;
-    url: '/students/{student_id}';
+    url: '/api/students/{student_id}';
 };
 
-export type ReadStudentStudentsStudentIdGetErrors = {
+export type ReadStudentApiStudentsStudentIdGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadStudentStudentsStudentIdGetError = ReadStudentStudentsStudentIdGetErrors[keyof ReadStudentStudentsStudentIdGetErrors];
+export type ReadStudentApiStudentsStudentIdGetError = ReadStudentApiStudentsStudentIdGetErrors[keyof ReadStudentApiStudentsStudentIdGetErrors];
 
-export type ReadStudentStudentsStudentIdGetResponses = {
+export type ReadStudentApiStudentsStudentIdGetResponses = {
     /**
      * Successful Response
      */
     200: StudentPrivate;
 };
 
-export type ReadStudentStudentsStudentIdGetResponse = ReadStudentStudentsStudentIdGetResponses[keyof ReadStudentStudentsStudentIdGetResponses];
+export type ReadStudentApiStudentsStudentIdGetResponse = ReadStudentApiStudentsStudentIdGetResponses[keyof ReadStudentApiStudentsStudentIdGetResponses];
 
-export type UpdateStudentStudentsStudentIdPutData = {
+export type UpdateStudentApiStudentsStudentIdPutData = {
     body: StudentUpdate;
     path: {
         /**
@@ -918,28 +918,28 @@ export type UpdateStudentStudentsStudentIdPutData = {
         student_id: number;
     };
     query?: never;
-    url: '/students/{student_id}';
+    url: '/api/students/{student_id}';
 };
 
-export type UpdateStudentStudentsStudentIdPutErrors = {
+export type UpdateStudentApiStudentsStudentIdPutErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type UpdateStudentStudentsStudentIdPutError = UpdateStudentStudentsStudentIdPutErrors[keyof UpdateStudentStudentsStudentIdPutErrors];
+export type UpdateStudentApiStudentsStudentIdPutError = UpdateStudentApiStudentsStudentIdPutErrors[keyof UpdateStudentApiStudentsStudentIdPutErrors];
 
-export type UpdateStudentStudentsStudentIdPutResponses = {
+export type UpdateStudentApiStudentsStudentIdPutResponses = {
     /**
      * Successful Response
      */
     200: StudentPrivate;
 };
 
-export type UpdateStudentStudentsStudentIdPutResponse = UpdateStudentStudentsStudentIdPutResponses[keyof UpdateStudentStudentsStudentIdPutResponses];
+export type UpdateStudentApiStudentsStudentIdPutResponse = UpdateStudentApiStudentsStudentIdPutResponses[keyof UpdateStudentApiStudentsStudentIdPutResponses];
 
-export type ReadReferencesStudentsStudentIdPhotosGetData = {
+export type ReadReferencesApiStudentsStudentIdPhotosGetData = {
     body?: never;
     path: {
         /**
@@ -957,31 +957,31 @@ export type ReadReferencesStudentsStudentIdPhotosGetData = {
          */
         limit?: number | null;
     };
-    url: '/students/{student_id}/photos/';
+    url: '/api/students/{student_id}/photos/';
 };
 
-export type ReadReferencesStudentsStudentIdPhotosGetErrors = {
+export type ReadReferencesApiStudentsStudentIdPhotosGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadReferencesStudentsStudentIdPhotosGetError = ReadReferencesStudentsStudentIdPhotosGetErrors[keyof ReadReferencesStudentsStudentIdPhotosGetErrors];
+export type ReadReferencesApiStudentsStudentIdPhotosGetError = ReadReferencesApiStudentsStudentIdPhotosGetErrors[keyof ReadReferencesApiStudentsStudentIdPhotosGetErrors];
 
-export type ReadReferencesStudentsStudentIdPhotosGetResponses = {
+export type ReadReferencesApiStudentsStudentIdPhotosGetResponses = {
     /**
-     * Response Read References Students  Student Id  Photos  Get
+     * Response Read References Api Students  Student Id  Photos  Get
      *
      * Successful Response
      */
     200: Array<ReferenceFacePublic>;
 };
 
-export type ReadReferencesStudentsStudentIdPhotosGetResponse = ReadReferencesStudentsStudentIdPhotosGetResponses[keyof ReadReferencesStudentsStudentIdPhotosGetResponses];
+export type ReadReferencesApiStudentsStudentIdPhotosGetResponse = ReadReferencesApiStudentsStudentIdPhotosGetResponses[keyof ReadReferencesApiStudentsStudentIdPhotosGetResponses];
 
-export type CreateReferenceStudentsStudentIdPhotosPostData = {
-    body: BodyCreateReferenceStudentsStudentIdPhotosPost;
+export type CreateReferenceApiStudentsStudentIdPhotosPostData = {
+    body: BodyCreateReferenceApiStudentsStudentIdPhotosPost;
     path: {
         /**
          * ID студента для добавления фотографии
@@ -989,28 +989,28 @@ export type CreateReferenceStudentsStudentIdPhotosPostData = {
         student_id: number;
     };
     query?: never;
-    url: '/students/{student_id}/photos/';
+    url: '/api/students/{student_id}/photos/';
 };
 
-export type CreateReferenceStudentsStudentIdPhotosPostErrors = {
+export type CreateReferenceApiStudentsStudentIdPhotosPostErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type CreateReferenceStudentsStudentIdPhotosPostError = CreateReferenceStudentsStudentIdPhotosPostErrors[keyof CreateReferenceStudentsStudentIdPhotosPostErrors];
+export type CreateReferenceApiStudentsStudentIdPhotosPostError = CreateReferenceApiStudentsStudentIdPhotosPostErrors[keyof CreateReferenceApiStudentsStudentIdPhotosPostErrors];
 
-export type CreateReferenceStudentsStudentIdPhotosPostResponses = {
+export type CreateReferenceApiStudentsStudentIdPhotosPostResponses = {
     /**
      * Successful Response
      */
     201: ReferenceFacePublic;
 };
 
-export type CreateReferenceStudentsStudentIdPhotosPostResponse = CreateReferenceStudentsStudentIdPhotosPostResponses[keyof CreateReferenceStudentsStudentIdPhotosPostResponses];
+export type CreateReferenceApiStudentsStudentIdPhotosPostResponse = CreateReferenceApiStudentsStudentIdPhotosPostResponses[keyof CreateReferenceApiStudentsStudentIdPhotosPostResponses];
 
-export type DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteData = {
+export type DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteData = {
     body?: never;
     path: {
         /**
@@ -1023,26 +1023,26 @@ export type DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteData = {
         photo_id: number;
     };
     query?: never;
-    url: '/students/{student_id}/photos/{photo_id}';
+    url: '/api/students/{student_id}/photos/{photo_id}';
 };
 
-export type DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteErrors = {
+export type DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteError = DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteErrors[keyof DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteErrors];
+export type DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteError = DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteErrors[keyof DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteErrors];
 
-export type DeleteReferenceStudentsStudentIdPhotosPhotoIdDeleteResponses = {
+export type DeleteReferenceApiStudentsStudentIdPhotosPhotoIdDeleteResponses = {
     /**
      * Successful Response
      */
     200: unknown;
 };
 
-export type ReadReferenceStudentsStudentIdPhotosPhotoIdGetData = {
+export type ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetData = {
     body?: never;
     path: {
         /**
@@ -1055,28 +1055,28 @@ export type ReadReferenceStudentsStudentIdPhotosPhotoIdGetData = {
         photo_id: number;
     };
     query?: never;
-    url: '/students/{student_id}/photos/{photo_id}';
+    url: '/api/students/{student_id}/photos/{photo_id}';
 };
 
-export type ReadReferenceStudentsStudentIdPhotosPhotoIdGetErrors = {
+export type ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadReferenceStudentsStudentIdPhotosPhotoIdGetError = ReadReferenceStudentsStudentIdPhotosPhotoIdGetErrors[keyof ReadReferenceStudentsStudentIdPhotosPhotoIdGetErrors];
+export type ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetError = ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetErrors[keyof ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetErrors];
 
-export type ReadReferenceStudentsStudentIdPhotosPhotoIdGetResponses = {
+export type ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetResponses = {
     /**
      * Successful Response
      */
     200: ReferenceFacePublic;
 };
 
-export type ReadReferenceStudentsStudentIdPhotosPhotoIdGetResponse = ReadReferenceStudentsStudentIdPhotosPhotoIdGetResponses[keyof ReadReferenceStudentsStudentIdPhotosPhotoIdGetResponses];
+export type ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetResponse = ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetResponses[keyof ReadReferenceApiStudentsStudentIdPhotosPhotoIdGetResponses];
 
-export type ReadResultsReportsGetData = {
+export type ReadResultsApiReportsGetData = {
     body?: never;
     path?: never;
     query?: {
@@ -1109,55 +1109,55 @@ export type ReadResultsReportsGetData = {
          */
         limit?: number | null;
     };
-    url: '/reports/';
+    url: '/api/reports/';
 };
 
-export type ReadResultsReportsGetErrors = {
+export type ReadResultsApiReportsGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadResultsReportsGetError = ReadResultsReportsGetErrors[keyof ReadResultsReportsGetErrors];
+export type ReadResultsApiReportsGetError = ReadResultsApiReportsGetErrors[keyof ReadResultsApiReportsGetErrors];
 
-export type ReadResultsReportsGetResponses = {
+export type ReadResultsApiReportsGetResponses = {
     /**
-     * Response Read Results Reports  Get
+     * Response Read Results Api Reports  Get
      *
      * Successful Response
      */
     200: Array<RecognitionDataPublicWithRecognitionResultAndStudent>;
 };
 
-export type ReadResultsReportsGetResponse = ReadResultsReportsGetResponses[keyof ReadResultsReportsGetResponses];
+export type ReadResultsApiReportsGetResponse = ReadResultsApiReportsGetResponses[keyof ReadResultsApiReportsGetResponses];
 
-export type CreateResultReportsPostData = {
-    body: BodyCreateResultReportsPost;
+export type CreateResultApiReportsPostData = {
+    body: BodyCreateResultApiReportsPost;
     path?: never;
     query?: never;
-    url: '/reports/';
+    url: '/api/reports/';
 };
 
-export type CreateResultReportsPostErrors = {
+export type CreateResultApiReportsPostErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type CreateResultReportsPostError = CreateResultReportsPostErrors[keyof CreateResultReportsPostErrors];
+export type CreateResultApiReportsPostError = CreateResultApiReportsPostErrors[keyof CreateResultApiReportsPostErrors];
 
-export type CreateResultReportsPostResponses = {
+export type CreateResultApiReportsPostResponses = {
     /**
      * Successful Response
      */
     201: RecognitionDataPublic;
 };
 
-export type CreateResultReportsPostResponse = CreateResultReportsPostResponses[keyof CreateResultReportsPostResponses];
+export type CreateResultApiReportsPostResponse = CreateResultApiReportsPostResponses[keyof CreateResultApiReportsPostResponses];
 
-export type ReadReportReportsDataIdGetData = {
+export type ReadReportApiReportsDataIdGetData = {
     body?: never;
     path: {
         /**
@@ -1166,28 +1166,28 @@ export type ReadReportReportsDataIdGetData = {
         data_id: number;
     };
     query?: never;
-    url: '/reports/{data_id}';
+    url: '/api/reports/{data_id}';
 };
 
-export type ReadReportReportsDataIdGetErrors = {
+export type ReadReportApiReportsDataIdGetErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type ReadReportReportsDataIdGetError = ReadReportReportsDataIdGetErrors[keyof ReadReportReportsDataIdGetErrors];
+export type ReadReportApiReportsDataIdGetError = ReadReportApiReportsDataIdGetErrors[keyof ReadReportApiReportsDataIdGetErrors];
 
-export type ReadReportReportsDataIdGetResponses = {
+export type ReadReportApiReportsDataIdGetResponses = {
     /**
      * Successful Response
      */
     200: RecognitionDataPublicWithRecognitionResultAndStudent;
 };
 
-export type ReadReportReportsDataIdGetResponse = ReadReportReportsDataIdGetResponses[keyof ReadReportReportsDataIdGetResponses];
+export type ReadReportApiReportsDataIdGetResponse = ReadReportApiReportsDataIdGetResponses[keyof ReadReportApiReportsDataIdGetResponses];
 
-export type UpdateResultReportsResultsResultIdPutData = {
+export type UpdateResultApiReportsResultsResultIdPutData = {
     body: RecognitionResultUpdate;
     path: {
         /**
@@ -1196,82 +1196,82 @@ export type UpdateResultReportsResultsResultIdPutData = {
         result_id: number;
     };
     query?: never;
-    url: '/reports/results/{result_id}';
+    url: '/api/reports/results/{result_id}';
 };
 
-export type UpdateResultReportsResultsResultIdPutErrors = {
+export type UpdateResultApiReportsResultsResultIdPutErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type UpdateResultReportsResultsResultIdPutError = UpdateResultReportsResultsResultIdPutErrors[keyof UpdateResultReportsResultsResultIdPutErrors];
+export type UpdateResultApiReportsResultsResultIdPutError = UpdateResultApiReportsResultsResultIdPutErrors[keyof UpdateResultApiReportsResultsResultIdPutErrors];
 
-export type UpdateResultReportsResultsResultIdPutResponses = {
+export type UpdateResultApiReportsResultsResultIdPutResponses = {
     /**
      * Successful Response
      */
     200: RecognitionResultPublicWithStudent;
 };
 
-export type UpdateResultReportsResultsResultIdPutResponse = UpdateResultReportsResultsResultIdPutResponses[keyof UpdateResultReportsResultsResultIdPutResponses];
+export type UpdateResultApiReportsResultsResultIdPutResponse = UpdateResultApiReportsResultsResultIdPutResponses[keyof UpdateResultApiReportsResultsResultIdPutResponses];
 
-export type LoginForAccessTokenTokenPostData = {
-    body: BodyLoginForAccessTokenTokenPost;
+export type LoginForAccessTokenApiTokenPostData = {
+    body: BodyLoginForAccessTokenApiTokenPost;
     path?: never;
     query?: never;
-    url: '/token/';
+    url: '/api/token/';
 };
 
-export type LoginForAccessTokenTokenPostErrors = {
+export type LoginForAccessTokenApiTokenPostErrors = {
     /**
      * Validation Error
      */
     422: HttpValidationError;
 };
 
-export type LoginForAccessTokenTokenPostError = LoginForAccessTokenTokenPostErrors[keyof LoginForAccessTokenTokenPostErrors];
+export type LoginForAccessTokenApiTokenPostError = LoginForAccessTokenApiTokenPostErrors[keyof LoginForAccessTokenApiTokenPostErrors];
 
-export type LoginForAccessTokenTokenPostResponses = {
+export type LoginForAccessTokenApiTokenPostResponses = {
     /**
      * Successful Response
      */
     200: Token;
 };
 
-export type LoginForAccessTokenTokenPostResponse = LoginForAccessTokenTokenPostResponses[keyof LoginForAccessTokenTokenPostResponses];
+export type LoginForAccessTokenApiTokenPostResponse = LoginForAccessTokenApiTokenPostResponses[keyof LoginForAccessTokenApiTokenPostResponses];
 
-export type ReadUsersMeUsersMeGetData = {
+export type ReadUsersMeApiUsersMeGetData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/users/me/';
+    url: '/api/users/me/';
 };
 
-export type ReadUsersMeUsersMeGetResponses = {
+export type ReadUsersMeApiUsersMeGetResponses = {
     /**
      * Successful Response
      */
     200: UserPublic;
 };
 
-export type ReadUsersMeUsersMeGetResponse = ReadUsersMeUsersMeGetResponses[keyof ReadUsersMeUsersMeGetResponses];
+export type ReadUsersMeApiUsersMeGetResponse = ReadUsersMeApiUsersMeGetResponses[keyof ReadUsersMeApiUsersMeGetResponses];
 
-export type ReadAllUsersUsersGetData = {
+export type ReadAllUsersApiUsersGetData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/users/';
+    url: '/api/users/';
 };
 
-export type ReadAllUsersUsersGetResponses = {
+export type ReadAllUsersApiUsersGetResponses = {
     /**
-     * Response Read All Users Users  Get
+     * Response Read All Users Api Users  Get
      *
      * Successful Response
      */
     200: Array<UserPublic>;
 };
 
-export type ReadAllUsersUsersGetResponse = ReadAllUsersUsersGetResponses[keyof ReadAllUsersUsersGetResponses];
+export type ReadAllUsersApiUsersGetResponse = ReadAllUsersApiUsersGetResponses[keyof ReadAllUsersApiUsersGetResponses];
