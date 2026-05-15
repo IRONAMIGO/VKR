@@ -25,7 +25,7 @@ async function handleLogin() {
     const success = await auth.login(form.username, form.password)
     if (success) {
       ElMessage.success('Вход выполнен')
-      const redirect = (route.query.redirect as string) || '/students'
+      const redirect = (route.query.redirect as string) || '/api/students'
       await router.push(redirect)
     } else {
       ElMessage.error('Неверное имя пользователя или пароль')

@@ -12,7 +12,7 @@ const { user, isAuthenticated, logout } = useAuth()
 
 async function handleLogout() {
   logout()
-  await router.push('/login')
+  await router.push('/api/login')
 }
 </script>
 
