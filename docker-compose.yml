@@ -21,6 +21,11 @@ services:
       context: ./front
     ports:
       - "80:8080"
+    volumes:
+      # Монтирование папки с фото
+      - ./back/data/photo:/usr/share/nginx/html/data/photo
+      # Монтирование папки с груповыми фото
+      - ./back/data/reports:/usr/share/nginx/html/data/reports
     depends_on:
       - backend
     restart: unless-stopped
