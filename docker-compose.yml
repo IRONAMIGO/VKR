@@ -6,7 +6,7 @@ services:
       - "8000:8000"
     environment:
       - PORT=8000
-      - CORS_URL=http://0.0.0.0:8080
+      - CORS_URL=http://91.227.68.159
     volumes:
       # Монтирование папки с моделями
       - ./back/models:/app/models:ro
