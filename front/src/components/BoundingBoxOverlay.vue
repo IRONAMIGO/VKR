@@ -54,7 +54,6 @@ const { boxes: overlayBoxes } = useImageBoundingBoxes(
   display: block;
   width: 800px;
   max-width: 100%;
-  max-height: 800px;
   overflow: hidden;
   margin: 0 auto;
 }
