@@ -6,7 +6,7 @@ import { Back } from '@element-plus/icons-vue'
 import { useStreams } from '@/composables/useStreams'
 import { useGroups } from '@/composables/useGroups'
 import { useStudents } from '@/composables/useStudents'
-import { readReportReportsDataIdGet, updateResultReportsResultsResultIdPut } from '@/api/client/sdk.gen'
+import { readReportApiReportsDataIdGet, updateResultApiReportsResultsResultIdPut } from '@/api/client/sdk.gen'
 import type {
   RecognitionDataPublicWithRecognitionResultAndStudent,
   RecognitionResultPublicWithStudent
@@ -57,7 +57,7 @@ function handleEdit(result: RecognitionResultPublicWithStudent) {
 
 async function handleEditSubmit({ resultId, studentId }: { resultId: number; studentId: number | null }) {
   try {
-    await updateResultReportsResultsResultIdPut({
+    await updateResultApiReportsResultsResultIdPut({
       path: { result_id: resultId },
       body: { student_id: studentId }
     })
@@ -75,7 +75,7 @@ async function fetchReport() {
   loading.value = true
   error.value = null
   try {
-    const { data } = await readReportReportsDataIdGet({ path: { data_id: reportId.value } })
+    const { data } = await readReportApiReportsDataIdGet({ path: { data_id: reportId.value } })
     report.value = data ?? null
   } catch (e: any) {
     error.value = e.message || 'Ошибка загрузки отчёта'
