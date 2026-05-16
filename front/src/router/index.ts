@@ -5,38 +5,38 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/api/login',
+            path: '/login',
             name: 'Login',
             component: () => import('@/views/LoginPage.vue'),
         },
         {
-            path: '/api/streams',
+            path: '/streams',
             component: () => import('@/views/StreamsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/api/groups',
+            path: '/groups',
             component: () => import('@/views/GroupsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/api/students',
+            path: '/students',
             component: () => import('@/views/StudentsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/api/students/:id',
+            path: '/students/:id',
             name: 'StudentDetail',
             component: () => import('@/views/StudentDetailPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/api/reports',
+            path: '/reports',
             component: () => import('@/views/ReportsPage.vue'),
             meta: { requiresAuth: true },
         },
         {
-            path: '/api/reports/:id',
+            path: '/reports/:id',
             component: () => import('@/views/ReportResultPage.vue'),
             meta: { requiresAuth: true },
         },
