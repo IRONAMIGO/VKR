@@ -92,7 +92,7 @@ function onUploaded() {
   loadReportsPage()
 }
 function openReportDetail(id: number) {
-  router.push(`/api/reports/${id}`)
+  router.push(`/reports/${id}`)
 }
 
 onMounted(async () => {

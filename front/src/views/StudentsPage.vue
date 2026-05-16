@@ -81,7 +81,7 @@ async function handleFormSubmit(data: StudentCreate | StudentUpdate) {
 }
 
 function onOpenStudent(row: StudentPublicWithGroup) {
-  router.push(`/api/students/${row.id}`)
+  router.push(`/students/${row.id}`)
 }
 </script>
 
