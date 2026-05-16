@@ -113,7 +113,7 @@ onMounted(async () => {
 
 <template>
   <div class="report-result-page">
-    <el-button @click="router.back()" type="default" style="margin-bottom: 16px" :icon="Back">
+    <el-button @click="router.push('/reports')" type="default" style="margin-bottom: 16px" :icon="Back">
       Назад к списку
     </el-button>
 

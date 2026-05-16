@@ -83,7 +83,7 @@ onMounted(() => {
 
 <template>
   <div class="student-detail-page">
-    <el-button @click="router.push('/api/students')" type="default" style="margin-bottom: 16px" :icon="Back">
+    <el-button @click="router.push('/students')" type="default" style="margin-bottom: 16px" :icon="Back">
       Назад к списку
     </el-button>
 
