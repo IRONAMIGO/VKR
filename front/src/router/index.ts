@@ -60,7 +60,7 @@ router.beforeEach(async (to, _from) => {
     if (to.path === '/api/login') {
         // Если уже залогинен, перенаправляем на защищённую страницу
         if (auth.isAuthenticated.value) {
-            return '/api/students'
+            return '/api/reports'
         }
         return true
     }

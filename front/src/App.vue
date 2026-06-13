@@ -26,10 +26,10 @@ async function handleLogout() {
             :default-active="route.path"
             class="header-menu"
         >
-          <el-menu-item index="/streams">Потоки</el-menu-item>
-          <el-menu-item index="/groups">Группы</el-menu-item>
+          <el-menu-item index="/reports">Журнал посещений</el-menu-item>
           <el-menu-item index="/students">Студенты</el-menu-item>
-          <el-menu-item index="/reports">Отчетность</el-menu-item>
+          <el-menu-item index="/groups">Группы</el-menu-item>
+          <el-menu-item index="/streams">Потоки</el-menu-item>
         </el-menu>
 
         <div class="header-right">
