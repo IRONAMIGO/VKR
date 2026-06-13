@@ -57,10 +57,10 @@ router.beforeEach(async (to, _from) => {
         await auth.init()
     }
 
-    if (to.path === '/api/login') {
+    if (to.path === '/login') {
         // Если уже залогинен, перенаправляем на защищённую страницу
         if (auth.isAuthenticated.value) {
-            return '/api/reports'
+            return '/reports'
         }
         return true
     }
@@ -69,7 +69,7 @@ router.beforeEach(async (to, _from) => {
     if (to.matched.some((record) => record.meta.requiresAuth)) {
         if (!auth.isAuthenticated.value) {
             return {
-                path: '/api/login',
+                path: '/login',
                 query: { redirect: to.fullPath },
             }
         }
